@@ -1,0 +1,110 @@
+<div class="flex h-screen bg-black">
+  <!-- Sidebar -->
+  <aside class="w-64 bg-black text-white flex flex-col border-r border-gray-800">
+    <!-- Logo y navegación principal -->
+    <div class="p-6">
+      <!-- Logo Spotify -->
+      <div class="flex items-center mb-8">
+        <svg class="w-8 h-8 mr-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.5 14.424c-.188.307-.588.4-.895.212-2.458-1.505-5.553-1.847-9.201-1.012-.35.08-.704-.134-.785-.483-.08-.35.134-.704.483-.785 4.017-.922 7.436-.534 10.185 1.17.307.188.4.588.212.895zm1.279-2.847c-.236.385-.74.505-1.125.27-2.817-1.734-7.11-2.235-10.445-1.224-.43.13-.882-.113-1.013-.543-.13-.43.113-.882.543-1.013 3.818-1.158 8.587-.608 11.77 1.385.385.236.505.74.27 1.125zm.11-2.966C14.7 8.852 9.297 8.627 6.44 9.767c-.514.205-1.095-.046-1.3-.56-.205-.514.046-1.095.56-1.3 3.314-1.323 9.296-1.066 12.697 1.338.46.325.576.956.251 1.416-.325.46-.956.576-1.416.251z" />
+        </svg>
+        <span class="text-2xl font-bold"> Mini Spotify</span>
+      </div>
+
+      <!-- Navegación principal -->
+      <nav class="space-y-2">
+        <a routerLink="/" routerLinkActive="bg-gray-800"
+          class="flex items-center px-3 py-2 rounded-md hover:bg-gray-800 transition-colors text-gray-300 hover:text-white group">
+          <svg class="w-6 h-6 mr-4 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M9.135 20.773v-3.057c0-.78.637-1.414 1.423-1.414h2.875c.377 0 .74.15 1.006.414.267.265.417.625.417 1v3.057c-.002.325.126.637.356.867.23.23.544.36.87.36h1.962c.502 0 .984-.2 1.34-.553.356-.354.555-.833.553-1.331V9.867c0-.133-.027-.265-.08-.384L12.9 2.72c-.32-.49-.863-.49-1.18 0L4.76 9.482c-.055.12-.08.253-.08.385v8.267c0 .497.2.973.557 1.331.356.353.839.553 1.34.553h1.962c.326 0 .64-.13.87-.36.23-.23.358-.542.356-.867z" />
+          </svg>
+          Inicio
+        </a>
+        <a routerLink="/search" routerLinkActive="bg-gray-800"
+          class="flex items-center px-3 py-2 rounded-md hover:bg-gray-800 transition-colors text-gray-300 hover:text-white group">
+          <svg class="w-6 h-6 mr-4 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          Buscar
+        </a>
+        <!-- Nueva sección Albums -->
+        <a routerLink="/albums" routerLinkActive="bg-gray-800"
+          class="flex items-center px-3 py-2 rounded-md hover:bg-gray-800 transition-colors text-gray-300 hover:text-white group">
+          <svg class="w-6 h-6 mr-4 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7 17.5c0-1.38 1.12-2.5 2.5-2.5s2.5 1.12 2.5 2.5S10.88 20 9.5 20 7 18.88 7 17.5zM12 13c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" />
+          </svg>
+          Albums
+        </a>
+        <a routerLink="/library" routerLinkActive="bg-gray-800"
+          class="flex items-center px-3 py-2 rounded-md hover:bg-gray-800 transition-colors text-gray-300 hover:text-white group">
+          <svg class="w-6 h-6 mr-4 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M3 22a1 1 0 01-1-1V3a1 1 0 012 0v18a1 1 0 01-1 1zM15.5 2.134A1 1 0 0014 3v18a1 1 0 001.5.866l8-9a1 1 0 000-1.732l-8-9z" />
+          </svg>
+          Tu biblioteca
+        </a>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- Contenido principal -->
+  <div class="flex-1 flex flex-col">
+    <!-- Header -->
+    <header class="flex justify-between items-center px-6 py-4 bg-gradient-to-b from-gray-900 to-gray-800 text-white">
+      <!-- Botones de navegación -->
+      <div class="flex items-center space-x-2">
+        <button class="p-2 bg-black bg-opacity-70 rounded-full hover:bg-opacity-80 transition-all">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button class="p-2 bg-black bg-opacity-70 rounded-full hover:bg-opacity-80 transition-all">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Usuario y controles -->
+      <div class="flex items-center gap-4">
+        <!-- Avatar y menú de usuario -->
+        <div class="relative" *ngIf="user as u">
+          <button
+            class="flex items-center space-x-3 bg-black bg-opacity-50 rounded-full pl-1 pr-3 py-1 hover:bg-opacity-70 transition-all">
+            <ng-container *ngIf="u.images?.length; else placeholder">
+              <img [src]="u.images?.[0]?.url" alt="User Avatar" class="w-8 h-8 rounded-full object-cover" />
+            </ng-container>
+            <span class="text-sm font-semibold max-w-32 truncate">{{ u.display_name }}</span>
+          </button>
+        </div>
+
+        <ng-template #placeholder>
+          <div class="w-8 h-8 rounded-full bg-gray-600 flex items-center justify-center">
+            <span class="text-sm font-bold">?</span>
+          </div>
+        </ng-template>
+
+        <!-- Botón de login -->
+        <button *ngIf="!user" (click)="login()"
+          class="px-8 py-3 bg-white text-black rounded-full hover:scale-105 transition-all font-semibold text-sm">
+          Iniciar sesión
+        </button>
+
+        <!-- Botón de logout -->
+        <button *ngIf="user" (click)="logout()"
+          class="px-4 py-2 text-gray-300 hover:text-white transition-colors text-sm font-medium">
+          Cerrar sesión
+        </button>
+      </div>
+    </header>
+
+    <!-- Contenido dinámico -->
+    <main class="flex-1 overflow-y-auto bg-gradient-to-b from-gray-800 to-gray-900">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>
